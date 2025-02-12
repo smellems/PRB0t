@@ -3,7 +3,12 @@
   "main": "index.js",
   "version": "2.0.0",
   "types": "./types/PullRequest.d.ts",
-  "files": ["src/**/*.ts", "index.js", "types/**/*.ts", "dist/**/*"],
+  "files": [
+    "src/**/*.ts",
+    "index.js",
+    "types/**/*.ts",
+    "dist/**/*"
+  ],
   "description": "Make PR on GitHub, with JSON description of changes",
   "scripts": {
     "build": "esbuild src/PullRequest.ts --bundle --outfile=index.js --platform=node --external:./node_modules/* --target=es2020",
@@ -35,7 +40,7 @@
     "@types/jest": "^29.4.0",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "esbuild": "^0.17.9",
-    "esbuild-jest": "^0.5.0",
+    "esbuild-jest": "^0.4.0",
     "eslint": "^8.34.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^16.1.0",
@@ -50,6 +55,6 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "octokit": "^2.0.14"
+    "octokit": "^4.1.1"
   }
 }
