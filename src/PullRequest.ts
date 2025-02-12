@@ -104,7 +104,7 @@ export function PullRequest(
       },
       fork: {
         owner: state.currentUser,
-        repo: branchFromRepo,
+        repo: state.currentUser,
       },
     };
   };
