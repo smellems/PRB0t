@@ -13,7 +13,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/http.js"
+      "dest": "dist/http.js",
       "headers": { "Access-Control-Allow-Origin": "*" }
     }
   ]
