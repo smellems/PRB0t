@@ -4,7 +4,7 @@
   "outputDirectory": ".",
   "functions": {
     "dist/http.js": {
-      "runtime": "node"
+      "memory": 1024
     }
   },
   "headers": [
