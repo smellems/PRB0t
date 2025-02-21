@@ -1,15 +1,7 @@
 {
-  "version": 2,
   "installCommand": "npm install",
   "buildCommand": "npm run server:build",
   "outputDirectory": ".",
-  "version": 2,
-  "builds": [
-    {
-      "src": "dist/http.js",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
       "src": "/(.*)",
