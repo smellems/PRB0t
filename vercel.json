@@ -2,11 +2,17 @@
   "installCommand": "npm install",
   "buildCommand": "npm run server:build",
   "outputDirectory": ".",
-  "routes": [
+  "functions": {
+    "dist/http.js": {
+      "runtime": "node"
+    }
+  },
+  "headers": [
     {
-      "src": "/(.*)",
-      "dest": "dist/http.js",
-      "headers": { "Access-Control-Allow-Origin": "*" }
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
     }
   ]
 }
