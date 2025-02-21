@@ -12,6 +12,8 @@
     }
   ],
   "functions": {
-    "dist/http.js": {}
+    "dist/http.js": {
+      "maxDuration": 15
+    }
   }
 }
