@@ -13,7 +13,7 @@
   "scripts": {
     "build": "esbuild src/PullRequest.ts --bundle --outfile=index.js --platform=node --external:./node_modules/* --target=es2020",
     "types": "npx tsc -p tsconfig.d.json",
-    "server:build": "esbuild ./src/handlers/http.ts --bundle --outfile=dist/http.js --platform=node --target=es2020",
+    "server:build": "esbuild ./src/handlers/http.ts --bundle --outfile=api/http.js --platform=node --target=es2020",
     "server:start": "node dist/server.js",
     "lambda:build": "esbuild ./src/handlers/lambda.ts --bundle --outfile=dist/lambda.js --platform=node --target=es2020",
     "lambda:clean": "rm -rf handler.zip dist",
