@@ -1,7 +1,9 @@
 {
+  "version": 2,
   "routes": [
     {
       "src": "/(.*)",
+      "use": "@vercel/node"
       "dest": "dist/http.js"
     }
   ]
