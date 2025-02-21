@@ -3,8 +3,8 @@
   "buildCommand": "npm run server:build",
   "outputDirectory": ".",
   "functions": {
-    "dist/http.js": {
-      "runtime": "node@22"
+    "api/http.js": {
+      memory: 1024
     }
   },
   "headers": [
