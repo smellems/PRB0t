@@ -2,17 +2,12 @@
   "installCommand": "npm install",
   "buildCommand": "npm run server:build",
   "outputDirectory": "dist",
-  "builds": [
+  "headers": [
     {
-      "src": "http.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "http.js",
-      "headers": { "Access-Control-Allow-Origin": "*" }
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
     }
   ]
 }
