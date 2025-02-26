@@ -1,19 +1,19 @@
 {
-  "version": 2,
   "installCommand": "npm install",
   "buildCommand": "npm run server:build",
-  "outputDirectory": "dist",
-  "builds": [
+  "outputDirectory": "api",
+  "headers": [
     {
-      "src": "dist/http.js",
-      "use": "@vercel/node"
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "dist/http.js",
-      "headers": { "Access-Control-Allow-Origin": "*" }
+      "source": "/(.*)",
+      "destination": "/api"
     }
   ]
 }
