@@ -5,14 +5,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "http.js",
+      "src": "dist/http.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "http.js",
+      "dest": "dist/http.js",
       "headers": { "Access-Control-Allow-Origin": "*" }
     }
   ]
