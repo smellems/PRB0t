@@ -1,6 +1,6 @@
 {
   "installCommand": "npm install",
-  "buildCommand": "npm run server:build",
+  "buildCommand": "npm run server:build && touch test.html",
   "outputDirectory": "dist",
   "builds": [
     {
