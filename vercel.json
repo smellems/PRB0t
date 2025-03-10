@@ -1,6 +1,6 @@
 {
   "installCommand": "npm install",
-  "buildCommand": "npm run server:build && mv dist/http.js api/http.js",
+  "buildCommand": "npm run server:build && mv dist/http.js dist/http_mv.js",
   "outputDirectory": "api",
   "headers": [
     {
