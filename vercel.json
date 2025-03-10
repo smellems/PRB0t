@@ -2,6 +2,11 @@
   "installCommand": "npm install",
   "buildCommand": "npm run server:build && mkdir dist/api && mv dist/http.js dist/api/http.js",
   "outputDirectory": "dist",
+  "functions": {
+    "api/http.js": {
+      "memory": 1024
+    }
+  }
   "headers": [
     {
       "source": "/(.*)",
