@@ -6,7 +6,7 @@
     "api/http.js": {
       "memory": 1024
     }
-  }
+  },
   "headers": [
     {
       "source": "/(.*)",
