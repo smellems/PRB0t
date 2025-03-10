@@ -3,7 +3,7 @@
   "buildCommand": "npm run server:build && mkdir dist/api && mv dist/http.js dist/api/http.js",
   "outputDirectory": "dist",
   "functions": {
-    "api/http.js": {
+    "api/*.js": {
       "maxDuration": 30
     }
   },
