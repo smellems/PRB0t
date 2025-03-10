@@ -1,6 +1,6 @@
 {
   "installCommand": "npm install",
-  "buildCommand": "npm run server:build && mkdir dist/api && mv dist/http.js dist/api/http.js && ls -l && ls -l dist && ls -l dist/api",
+  "buildCommand": "npm run server:build && mkdir dist/api && mv dist/http.js dist/api/http.js && touch index.html",
   "outputDirectory": "dist",
   "headers": [
     {
