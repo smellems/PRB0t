@@ -1,13 +1,19 @@
 {
   "installCommand": "npm install",
-  "buildCommand": "npm run server:build && mkdir dist/api && mv dist/http.js dist/api/http.js",
+  "buildCommand": "npm run server:build",
   "outputDirectory": "dist",
-  "headers": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
-      ]
+      "src": "http.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "http.js",
+      "headers": { "Access-Control-Allow-Origin": "*" }
     }
   ]
 }
