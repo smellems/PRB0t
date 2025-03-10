@@ -1,12 +1,7 @@
 {
   "installCommand": "npm install",
-  "buildCommand": "npm run server:build",
-  "outputDirectory": "dist",
-  "functions": {
-    "http.js": {
-      "memory": 1024
-    }
-  },
+  "buildCommand": "npm run server:build && mv -p dist/http.js api http.js",
+  "outputDirectory": "api",
   "headers": [
     {
       "source": "/(.*)",
