@@ -1,6 +1,11 @@
 {
   "installCommand": "npm install",
   "buildCommand": "npm run server:build",
+  "outputDirectory": "dist",
+  "functions": {
+    "http.js": {
+      "memory": 1024
+    }
   "headers": [
     {
       "source": "/(.*)",
