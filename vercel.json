@@ -1,18 +1,18 @@
 {
   "installCommand": "npm install",
-  "buildCommand": "npm run server:build && touch test.html",
+  "buildCommand": "npm run server:build && mkdir dist/api && mv dist/http.js dist/api/http.js",
   "outputDirectory": "dist",
-  "builds": [
-    {
-      "src": "http.js",
-      "use": "@vercel/node"
+  "functions": {
+    "api/http.js": {
+      "runtime": "@vercel/node"
     }
-  ],
-  "routes": [
+  },
+  "headers": [
     {
-      "src": "/(.*)",
-      "dest": "http.js",
-      "headers": { "Access-Control-Allow-Origin": "*" }
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
     }
   ]
 }
