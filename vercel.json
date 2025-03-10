@@ -1,7 +1,12 @@
 {
   "installCommand": "npm install",
-  "buildCommand": "npm run server:build && mkdir dist/api && mv dist/http.js dist/api/http.js && touch index.html",
-  "outputDirectory": "dist",
+  "buildCommand": "npm run server:build && mkdir api && mv dist/http.js api/http.js",
+  "outputDirectory": ".",
+  "functions": {
+    "api/http.js": {
+      "maxDuration": 30
+    }
+  },
   "headers": [
     {
       "source": "/(.*)",
